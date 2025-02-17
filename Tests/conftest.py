@@ -23,6 +23,6 @@ def browser_conf():
     browser.quit()
 
 
-@pytest.fixture
+@pytest.fixture(scope='function', autouse=True)
 def file_path():
     return os.path.join(os.path.dirname(__file__), 'Files', 'meme.png')
