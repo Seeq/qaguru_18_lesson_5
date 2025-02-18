@@ -2,7 +2,7 @@ from selene import browser, have, be
 
 
 def test_complete_form(browser_conf, file_path):
-    browser.open('/')
+    browser.open('/automation-practice-form')
     browser.element('#app').should(be.visible)
     browser.element('#app').should(have.text('Practice Form'))
     browser.element('#fixedban').should(be.visible)

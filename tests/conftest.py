@@ -12,7 +12,7 @@ from selenium import webdriver
 def browser_conf():
     browser.config.window_height = 800
     browser.config.window_width = 1280
-    browser.config.base_url = 'https://demoqa.com/automation-practice-form'
+    browser.config.base_url = 'https://demoqa.com'
     driver_options = webdriver.ChromeOptions()
     driver_options.add_argument('--headless')
     driver_options.page_load_strategy = 'eager'
@@ -25,4 +25,4 @@ def browser_conf():
 
 @pytest.fixture(scope='function', autouse=True)
 def file_path():
-    return os.path.join(os.path.dirname(__file__), 'Files', 'meme.png')
+    return os.path.join(os.path.dirname(__file__), 'files', 'meme.png')
